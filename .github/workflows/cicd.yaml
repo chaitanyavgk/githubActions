@@ -1,11 +1,32 @@
-name: First-GHA-test
-on: 
-  push
-  
+
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  pages: write
+  id-token: write
+  contents: read
+
 jobs:
- b16_first_job:
-   runs-on: ubuntu-latest    
-    
-   steps:    
-      - name: message
-        run: echo "Welcome to GitHubactions by batch16 champs"
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./   # upload repo root; change if your index.html is in a subfolder
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v1
