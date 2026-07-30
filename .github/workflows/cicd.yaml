@@ -25,7 +25,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./   # upload repo root; change if your index.html is in a subfolder
+          path: ./    # change to a subfolder if index.html isn't at repo root
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
