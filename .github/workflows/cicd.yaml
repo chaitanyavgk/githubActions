@@ -17,15 +17,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./    # change to a subfolder if index.html isn't at repo root
+          path: ./   # change to a subfolder if index.html isn't at repo root
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
