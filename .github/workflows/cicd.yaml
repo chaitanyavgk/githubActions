@@ -23,7 +23,7 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v7
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ./   # change to a subfolder if index.html isn't at repo root
 
