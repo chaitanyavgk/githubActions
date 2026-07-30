@@ -11,4 +11,4 @@ jobs:
     steps:
     
       - name: message
-        run: echo "Welcome to GitHubactions by batch16 champs"
+        run: echo "Welcome to GitHubactions by selfhosted batch16 champs"
