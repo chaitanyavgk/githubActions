@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v7
+        uses: actions/configure-pages@v2
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v7
@@ -28,5 +28,5 @@ jobs:
           path: ./   # change to a subfolder if index.html isn't at repo root
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v7
+        uses: actions/deploy-pages@v2
       
